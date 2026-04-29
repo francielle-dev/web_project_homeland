@@ -1,0 +1,90 @@
+.card {
+  margin-top: 92px;
+  display: grid;
+  grid-template-columns: 460px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+  "title artists"
+  "image description"
+  "button description";
+  gap:48px 40px;
+}
+
+  .card__title {
+  max-width: 450px;
+  grid-area: title;
+  font-family:"Inter", sans-serif;
+  font-weight: 900;
+  font-size: 72px;
+  text-align: left;
+  color:#FFFFFF;
+  margin:0;
+}
+
+  .card__image {
+   grid-area: image;
+    width: 100%;
+    box-shadow: 10px 10px 25px 0px #00000080;
+  }
+
+  .card__artists {
+    grid-area: artists;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+
+  .card__artists-identification {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+    color:#FFFFFF;
+    margin:0;
+  }
+
+  .card__artists-name {
+    margin:0;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #FFFFFF;
+
+  }
+
+  .card__text {
+    grid-area: description;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #FFFFFF;
+
+  }
+
+
+  .card__description-start {
+    margin:0;
+   }
+
+   .card__description-middle {
+    margin:25px 0 0 ;
+   }
+
+   .card__description-end {
+    margin:25px 0 0;
+   }
+
+  .card__button {
+    grid-area: button;
+    max-width: 355px;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    color: #FFFFFF;
+    padding: 13px 20px;
+    background: linear-gradient(90deg, #0278FE 0%, #003A7B 99.98%);
+    box-shadow: 10px 10px 25px 0px #00000080;
+    border-radius: 4px;
+    border: none;
+  }
