@@ -1,0 +1,27 @@
+.photo {
+  max-width: 1184px;
+  margin:118px auto 0;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap:16px;
+}
+
+.photo__grid-item {
+  width: 100%;
+}
+
+@media (max-width:1024px) {
+  .photo {
+    max-width: 720px;
+    margin-top: 64px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  }
+
+@media (max-width:544px) {
+  .photo {
+    max-width: 288px;
+    margin-top: 38px;
+    grid-template-columns: 1fr;
+  }
+}

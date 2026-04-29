@@ -2,3 +2,15 @@
   max-width: 984px;
   margin:0 auto 0;
 }
+
+@media (max-width:1024px) {
+  .place {
+    max-width: 720px;
+  }
+}
+
+@media (max-width:544px){
+  .place {
+    max-width: 288px;
+  }
+}

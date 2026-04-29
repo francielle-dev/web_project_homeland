@@ -1,8 +1,8 @@
 .card {
   margin-top: 92px;
   display: grid;
-  grid-template-columns: 460px 1fr;
-  grid-template-rows: auto 1fr auto;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto 1fr;
   grid-template-areas:
   "title artists"
   "image description"
@@ -16,21 +16,26 @@
   font-family:"Inter", sans-serif;
   font-weight: 900;
   font-size: 72px;
-  text-align: left;
   color:#FFFFFF;
   margin:0;
 }
 
   .card__image {
    grid-area: image;
-    width: 100%;
-    box-shadow: 10px 10px 25px 0px #00000080;
+   width: 100%;
+   box-shadow: 10px 10px 25px 0px #00000080;
+  }
+
+  .card__image:hover {
+    opacity: 50%;
+    cursor: pointer;
+
   }
 
   .card__artists {
     grid-area: artists;
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     justify-content: end;
   }
 
@@ -63,7 +68,6 @@
 
   }
 
-
   .card__description-start {
     margin:0;
    }
@@ -77,8 +81,10 @@
    }
 
   .card__button {
-    grid-area: button;
     max-width: 355px;
+    height: 48px;
+    grid-area: button;
+    align-items: start;
     font-family: "Inter", sans-serif;
     font-size: 18px;
     color: #FFFFFF;
@@ -88,3 +94,54 @@
     border-radius: 4px;
     border: none;
   }
+
+  .card__button:hover {
+    cursor: pointer;
+    background:  #003A7B;
+  }
+
+  @media (max-width:1024px) {
+  .card {
+    margin-top: 88px;
+  }
+  .card__title {
+    font-size: 42px;
+  }
+  .card__text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width:544px) {
+  .card {
+  margin-top:50px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "title"
+  "artists"
+  "image"
+  "description"
+  "description"
+  "button";
+  gap:30px;
+}
+
+.card__title {
+  font-size: 32px;
+ }
+
+  .card__artists {
+    margin: auto;
+  }
+  .card__text {
+    font-size: 16px;
+}
+.card__button {
+  font-size: 14px;
+}
+}
+
+
+
+
+
